@@ -1,8 +1,10 @@
 extends RigidBody2D
 
 var thrust = Vector2(0, -250)
-var torque = 3000
+var torque = 1500
+signal shoot(bullet, direction, location)
 
+# Player Movement
 func _integrate_forces(state):
 	if Input.is_action_pressed("ui_up"):
 		state.apply_central_force(thrust.rotated(rotation))
