@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://u532s6li1h6d"]
+[gd_scene load_steps=5 format=3 uid="uid://u532s6li1h6d"]
 
 [ext_resource type="Script" uid="uid://cuog3kjq5kdcp" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b3smxlfy1arp8" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cq52qowlhe27j" path="res://assets/Purple Nebula 2 - 1024x1024.png" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ckgmef2ea7q7j" path="res://scenes/bullet.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
 
 [node name="SpaceBg" type="Sprite2D" parent="."]
 texture = ExtResource("2_lnu2h")
+
+[node name="bullet" parent="." instance=ExtResource("4_lbhrr")]
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 gravity_scale = 0.0
